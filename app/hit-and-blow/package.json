@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "sh ./cmd/deploy.sh"
+    "deploy": "sh ./cmd/deploy.sh",
+    "migrate": "sh ./cmd/migrate.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
