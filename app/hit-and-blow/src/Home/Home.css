@@ -1,0 +1,240 @@
+* {
+  background-color: rgb(40, 44, 52);
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.Home {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 8vw;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.title-hit {
+  color: rgb(220, 20, 60);
+}
+
+.title-blow {
+  color: rgb(30, 144, 255);
+}
+
+.InputPanel {
+  margin-top: 5vh;
+}
+
+.input-main {
+  display: grid;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.panel {
+  grid-area: panel;
+  display: grid;
+  grid-template-areas:
+    "one-b   two-b   three-b"
+    "four-b  five-b  six-b  "
+    "seven-b eight-b nine-b "
+    "clear   zero-b  return ";
+  justify-content: center;
+}
+
+.panel button {
+  background-color: rgb(65, 105, 225);
+  border-radius: 16px;
+}
+
+.panel button:hover {
+  background-color: rgba(65, 105, 225, 0.7);
+}
+
+.zero-button {
+  grid-area: zero-b;
+}
+
+.one-button {
+  grid-area: one-b;
+}
+
+.two-button {
+  grid-area: two-b;
+}
+
+.three-button {
+  grid-area: three-b;
+}
+
+.four-button {
+  grid-area: four-b;
+}
+
+.five-button {
+  grid-area: five-b;
+}
+
+.six-button {
+  grid-area: six-b;
+}
+
+.seven-button {
+  grid-area: seven-b;
+}
+
+.eight-button {
+  grid-area: eight-b;
+}
+
+.nine-button {
+  grid-area: nine-b;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.return {
+  grid-area: return;
+}
+
+.value {
+  grid-area: value;
+  display: grid;
+  grid-template-areas: "one-v two-v three-v four-v";
+  justify-content: center;
+}
+
+.value button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: solid;
+  border-width: 4px;
+  border-radius: 8px;
+  font-size: 36px;
+}
+
+.value button:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.one-value {
+  grid-area: one-v;
+}
+
+.two-value {
+  grid-area: two-v;
+}
+
+.three-value {
+  grid-area: three-v;
+}
+
+.four-value {
+  grid-area: four-v;
+}
+
+.warning {
+  grid-area: warning;
+  color: rgb(255, 0, 0);
+}
+
+.submit {
+  grid-area: submit;
+}
+
+.submit button {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(65, 105, 225);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+.submit button:hover {
+  background-color: rgba(65, 105, 225, 0.7);
+}
+
+@media screen and (min-width: 1024px) {
+  .input-text {
+    font-size: 36px;
+  }
+
+  .input-main {
+    grid-template-columns: 310px 310px;
+    grid-template-rows: 28px 100px 119px 44px 14px;
+    grid-template-areas:
+      "panel ......."
+      "panel value  "
+      "panel warning"
+      "panel submit "
+      "panel .......";
+    grid-column-gap: 14px;
+  }
+
+  .panel {
+    grid-template-columns: 72px 72px 72px;
+    grid-template-rows: 72px 72px 72px 72px;
+    grid-gap: 7px;
+  }
+
+  .panel button {
+    font-size: 36px;
+  }
+
+  .value {
+    grid-template-columns: 72px 72px 72px 72px;
+    grid-gap: 7px;
+  }
+
+  .submit button {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .input-text {
+    font-size: 5vw;
+  }
+
+  .input-main {
+    grid-template-rows: 64.5vw 20vw 10vw 12vw;
+    grid-template-areas:
+      "panel  "
+      "value  "
+      "warning"
+      "submit ";
+    grid-gap: 2vh;
+  }
+
+  .panel {
+    grid-template-columns: 15vw 15vw 15vw;
+    grid-template-rows: 15vw 15vw 15vw 15vw;
+    grid-gap: 1.5vw;
+  }
+
+  .panel button {
+    font-size: 28px;
+  }
+
+  .value {
+    grid-template-columns: 15vw 15vw 15vw 15vw;
+    grid-gap: 1vw;
+  }
+
+  .submit button {
+    font-size: 24px;
+  }
+}
