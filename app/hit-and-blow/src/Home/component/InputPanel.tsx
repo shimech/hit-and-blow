@@ -75,7 +75,6 @@ class InputPanel extends React.Component<Props, State> {
         }
       }
     }
-    console.log(this.state.value);
   };
 
   validateValue = () => {
