@@ -5,7 +5,7 @@ import json
 from utils import Utils
 
 FILE_PATH = os.path.abspath(__file__)
-NUMS = range(10)
+NUMS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 DEFAULT_LENGTH = 4
 
 
@@ -20,7 +20,7 @@ def main():
     database = []
     for c in candidates:
         database.append({
-            "value": c,
+            "value": "".join(c),
             "isRemain": True
         })
 
