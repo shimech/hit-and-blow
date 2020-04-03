@@ -1,1892 +1,842 @@
 [
   {
-    "value": [
-      0,
-      1,
-      2,
-      3
-    ],
+    "value": "0123",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      2,
-      4
-    ],
+    "value": "0124",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      2,
-      5
-    ],
+    "value": "0125",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      2,
-      6
-    ],
+    "value": "0126",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      2,
-      7
-    ],
+    "value": "0127",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      2,
-      8
-    ],
+    "value": "0128",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      2,
-      9
-    ],
+    "value": "0129",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      3,
-      4
-    ],
+    "value": "0134",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      3,
-      5
-    ],
+    "value": "0135",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      3,
-      6
-    ],
+    "value": "0136",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      3,
-      7
-    ],
+    "value": "0137",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      3,
-      8
-    ],
+    "value": "0138",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      3,
-      9
-    ],
+    "value": "0139",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      4,
-      5
-    ],
+    "value": "0145",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      4,
-      6
-    ],
+    "value": "0146",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      4,
-      7
-    ],
+    "value": "0147",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      4,
-      8
-    ],
+    "value": "0148",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      4,
-      9
-    ],
+    "value": "0149",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      5,
-      6
-    ],
+    "value": "0156",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      5,
-      7
-    ],
+    "value": "0157",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      5,
-      8
-    ],
+    "value": "0158",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      5,
-      9
-    ],
+    "value": "0159",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      6,
-      7
-    ],
+    "value": "0167",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      6,
-      8
-    ],
+    "value": "0168",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      6,
-      9
-    ],
+    "value": "0169",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      7,
-      8
-    ],
+    "value": "0178",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      7,
-      9
-    ],
+    "value": "0179",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      1,
-      8,
-      9
-    ],
+    "value": "0189",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      3,
-      4
-    ],
+    "value": "0234",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      3,
-      5
-    ],
+    "value": "0235",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      3,
-      6
-    ],
+    "value": "0236",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      3,
-      7
-    ],
+    "value": "0237",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      3,
-      8
-    ],
+    "value": "0238",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      3,
-      9
-    ],
+    "value": "0239",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      4,
-      5
-    ],
+    "value": "0245",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      4,
-      6
-    ],
+    "value": "0246",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      4,
-      7
-    ],
+    "value": "0247",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      4,
-      8
-    ],
+    "value": "0248",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      4,
-      9
-    ],
+    "value": "0249",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      5,
-      6
-    ],
+    "value": "0256",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      5,
-      7
-    ],
+    "value": "0257",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      5,
-      8
-    ],
+    "value": "0258",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      5,
-      9
-    ],
+    "value": "0259",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      6,
-      7
-    ],
+    "value": "0267",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      6,
-      8
-    ],
+    "value": "0268",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      6,
-      9
-    ],
+    "value": "0269",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      7,
-      8
-    ],
+    "value": "0278",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      7,
-      9
-    ],
+    "value": "0279",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      2,
-      8,
-      9
-    ],
+    "value": "0289",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      4,
-      5
-    ],
+    "value": "0345",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      4,
-      6
-    ],
+    "value": "0346",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      4,
-      7
-    ],
+    "value": "0347",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      4,
-      8
-    ],
+    "value": "0348",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      4,
-      9
-    ],
+    "value": "0349",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      5,
-      6
-    ],
+    "value": "0356",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      5,
-      7
-    ],
+    "value": "0357",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      5,
-      8
-    ],
+    "value": "0358",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      5,
-      9
-    ],
+    "value": "0359",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      6,
-      7
-    ],
+    "value": "0367",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      6,
-      8
-    ],
+    "value": "0368",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      6,
-      9
-    ],
+    "value": "0369",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      7,
-      8
-    ],
+    "value": "0378",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      7,
-      9
-    ],
+    "value": "0379",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      3,
-      8,
-      9
-    ],
+    "value": "0389",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      5,
-      6
-    ],
+    "value": "0456",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      5,
-      7
-    ],
+    "value": "0457",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      5,
-      8
-    ],
+    "value": "0458",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      5,
-      9
-    ],
+    "value": "0459",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      6,
-      7
-    ],
+    "value": "0467",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      6,
-      8
-    ],
+    "value": "0468",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      6,
-      9
-    ],
+    "value": "0469",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      7,
-      8
-    ],
+    "value": "0478",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      7,
-      9
-    ],
+    "value": "0479",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      4,
-      8,
-      9
-    ],
+    "value": "0489",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      5,
-      6,
-      7
-    ],
+    "value": "0567",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      5,
-      6,
-      8
-    ],
+    "value": "0568",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      5,
-      6,
-      9
-    ],
+    "value": "0569",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      5,
-      7,
-      8
-    ],
+    "value": "0578",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      5,
-      7,
-      9
-    ],
+    "value": "0579",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      5,
-      8,
-      9
-    ],
+    "value": "0589",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      6,
-      7,
-      8
-    ],
+    "value": "0678",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      6,
-      7,
-      9
-    ],
+    "value": "0679",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      6,
-      8,
-      9
-    ],
+    "value": "0689",
     "isRemain": true
   },
   {
-    "value": [
-      0,
-      7,
-      8,
-      9
-    ],
+    "value": "0789",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      3,
-      4
-    ],
+    "value": "1234",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      3,
-      5
-    ],
+    "value": "1235",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      3,
-      6
-    ],
+    "value": "1236",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      3,
-      7
-    ],
+    "value": "1237",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      3,
-      8
-    ],
+    "value": "1238",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      3,
-      9
-    ],
+    "value": "1239",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      4,
-      5
-    ],
+    "value": "1245",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      4,
-      6
-    ],
+    "value": "1246",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      4,
-      7
-    ],
+    "value": "1247",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      4,
-      8
-    ],
+    "value": "1248",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      4,
-      9
-    ],
+    "value": "1249",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      5,
-      6
-    ],
+    "value": "1256",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      5,
-      7
-    ],
+    "value": "1257",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      5,
-      8
-    ],
+    "value": "1258",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      5,
-      9
-    ],
+    "value": "1259",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      6,
-      7
-    ],
+    "value": "1267",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      6,
-      8
-    ],
+    "value": "1268",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      6,
-      9
-    ],
+    "value": "1269",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      7,
-      8
-    ],
+    "value": "1278",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      7,
-      9
-    ],
+    "value": "1279",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      2,
-      8,
-      9
-    ],
+    "value": "1289",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      4,
-      5
-    ],
+    "value": "1345",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      4,
-      6
-    ],
+    "value": "1346",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      4,
-      7
-    ],
+    "value": "1347",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      4,
-      8
-    ],
+    "value": "1348",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      4,
-      9
-    ],
+    "value": "1349",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      5,
-      6
-    ],
+    "value": "1356",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      5,
-      7
-    ],
+    "value": "1357",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      5,
-      8
-    ],
+    "value": "1358",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      5,
-      9
-    ],
+    "value": "1359",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      6,
-      7
-    ],
+    "value": "1367",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      6,
-      8
-    ],
+    "value": "1368",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      6,
-      9
-    ],
+    "value": "1369",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      7,
-      8
-    ],
+    "value": "1378",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      7,
-      9
-    ],
+    "value": "1379",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      3,
-      8,
-      9
-    ],
+    "value": "1389",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      5,
-      6
-    ],
+    "value": "1456",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      5,
-      7
-    ],
+    "value": "1457",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      5,
-      8
-    ],
+    "value": "1458",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      5,
-      9
-    ],
+    "value": "1459",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      6,
-      7
-    ],
+    "value": "1467",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      6,
-      8
-    ],
+    "value": "1468",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      6,
-      9
-    ],
+    "value": "1469",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      7,
-      8
-    ],
+    "value": "1478",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      7,
-      9
-    ],
+    "value": "1479",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      4,
-      8,
-      9
-    ],
+    "value": "1489",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      5,
-      6,
-      7
-    ],
+    "value": "1567",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      5,
-      6,
-      8
-    ],
+    "value": "1568",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      5,
-      6,
-      9
-    ],
+    "value": "1569",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      5,
-      7,
-      8
-    ],
+    "value": "1578",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      5,
-      7,
-      9
-    ],
+    "value": "1579",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      5,
-      8,
-      9
-    ],
+    "value": "1589",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      6,
-      7,
-      8
-    ],
+    "value": "1678",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      6,
-      7,
-      9
-    ],
+    "value": "1679",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      6,
-      8,
-      9
-    ],
+    "value": "1689",
     "isRemain": true
   },
   {
-    "value": [
-      1,
-      7,
-      8,
-      9
-    ],
+    "value": "1789",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      4,
-      5
-    ],
+    "value": "2345",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      4,
-      6
-    ],
+    "value": "2346",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      4,
-      7
-    ],
+    "value": "2347",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      4,
-      8
-    ],
+    "value": "2348",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      4,
-      9
-    ],
+    "value": "2349",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      5,
-      6
-    ],
+    "value": "2356",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      5,
-      7
-    ],
+    "value": "2357",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      5,
-      8
-    ],
+    "value": "2358",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      5,
-      9
-    ],
+    "value": "2359",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      6,
-      7
-    ],
+    "value": "2367",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      6,
-      8
-    ],
+    "value": "2368",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      6,
-      9
-    ],
+    "value": "2369",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      7,
-      8
-    ],
+    "value": "2378",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      7,
-      9
-    ],
+    "value": "2379",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      3,
-      8,
-      9
-    ],
+    "value": "2389",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      5,
-      6
-    ],
+    "value": "2456",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      5,
-      7
-    ],
+    "value": "2457",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      5,
-      8
-    ],
+    "value": "2458",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      5,
-      9
-    ],
+    "value": "2459",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      6,
-      7
-    ],
+    "value": "2467",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      6,
-      8
-    ],
+    "value": "2468",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      6,
-      9
-    ],
+    "value": "2469",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      7,
-      8
-    ],
+    "value": "2478",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      7,
-      9
-    ],
+    "value": "2479",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      4,
-      8,
-      9
-    ],
+    "value": "2489",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      5,
-      6,
-      7
-    ],
+    "value": "2567",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      5,
-      6,
-      8
-    ],
+    "value": "2568",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      5,
-      6,
-      9
-    ],
+    "value": "2569",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      5,
-      7,
-      8
-    ],
+    "value": "2578",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      5,
-      7,
-      9
-    ],
+    "value": "2579",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      5,
-      8,
-      9
-    ],
+    "value": "2589",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      6,
-      7,
-      8
-    ],
+    "value": "2678",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      6,
-      7,
-      9
-    ],
+    "value": "2679",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      6,
-      8,
-      9
-    ],
+    "value": "2689",
     "isRemain": true
   },
   {
-    "value": [
-      2,
-      7,
-      8,
-      9
-    ],
+    "value": "2789",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      5,
-      6
-    ],
+    "value": "3456",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      5,
-      7
-    ],
+    "value": "3457",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      5,
-      8
-    ],
+    "value": "3458",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      5,
-      9
-    ],
+    "value": "3459",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      6,
-      7
-    ],
+    "value": "3467",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      6,
-      8
-    ],
+    "value": "3468",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      6,
-      9
-    ],
+    "value": "3469",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      7,
-      8
-    ],
+    "value": "3478",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      7,
-      9
-    ],
+    "value": "3479",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      4,
-      8,
-      9
-    ],
+    "value": "3489",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      5,
-      6,
-      7
-    ],
+    "value": "3567",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      5,
-      6,
-      8
-    ],
+    "value": "3568",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      5,
-      6,
-      9
-    ],
+    "value": "3569",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      5,
-      7,
-      8
-    ],
+    "value": "3578",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      5,
-      7,
-      9
-    ],
+    "value": "3579",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      5,
-      8,
-      9
-    ],
+    "value": "3589",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      6,
-      7,
-      8
-    ],
+    "value": "3678",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      6,
-      7,
-      9
-    ],
+    "value": "3679",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      6,
-      8,
-      9
-    ],
+    "value": "3689",
     "isRemain": true
   },
   {
-    "value": [
-      3,
-      7,
-      8,
-      9
-    ],
+    "value": "3789",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      5,
-      6,
-      7
-    ],
+    "value": "4567",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      5,
-      6,
-      8
-    ],
+    "value": "4568",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      5,
-      6,
-      9
-    ],
+    "value": "4569",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      5,
-      7,
-      8
-    ],
+    "value": "4578",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      5,
-      7,
-      9
-    ],
+    "value": "4579",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      5,
-      8,
-      9
-    ],
+    "value": "4589",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      6,
-      7,
-      8
-    ],
+    "value": "4678",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      6,
-      7,
-      9
-    ],
+    "value": "4679",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      6,
-      8,
-      9
-    ],
+    "value": "4689",
     "isRemain": true
   },
   {
-    "value": [
-      4,
-      7,
-      8,
-      9
-    ],
+    "value": "4789",
     "isRemain": true
   },
   {
-    "value": [
-      5,
-      6,
-      7,
-      8
-    ],
+    "value": "5678",
     "isRemain": true
   },
   {
-    "value": [
-      5,
-      6,
-      7,
-      9
-    ],
+    "value": "5679",
     "isRemain": true
   },
   {
-    "value": [
-      5,
-      6,
-      8,
-      9
-    ],
+    "value": "5689",
     "isRemain": true
   },
   {
-    "value": [
-      5,
-      7,
-      8,
-      9
-    ],
+    "value": "5789",
     "isRemain": true
   },
   {
-    "value": [
-      6,
-      7,
-      8,
-      9
-    ],
+    "value": "6789",
     "isRemain": true
   }
 ]
