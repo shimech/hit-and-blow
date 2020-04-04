@@ -20,7 +20,7 @@ class ResultTable extends React.Component<Props, State> {
       rows = this.props.playerAns.map((ans, index) => {
         if (index < this.props.cpuAns.length) {
           return (
-            <tr>
+            <tr key={index}>
               <td className="result">
                 {ans.hit}
                 <span className="hit">H</span>
@@ -39,7 +39,7 @@ class ResultTable extends React.Component<Props, State> {
           );
         } else {
           return (
-            <tr>
+            <tr key={index}>
               <td className="result">
                 {ans.hit}
                 <span className="hit">H</span>
@@ -55,7 +55,7 @@ class ResultTable extends React.Component<Props, State> {
       rows = this.props.cpuAns.map((ans, index) => {
         if (index < this.props.playerAns.length) {
           return (
-            <tr>
+            <tr key={index}>
               <td className="result">
                 {this.props.playerAns[index].hit}
                 <span className="hit">H</span>
@@ -74,7 +74,7 @@ class ResultTable extends React.Component<Props, State> {
           );
         } else {
           return (
-            <tr>
+            <tr key={index}>
               <td
                 className="result"
                 style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}

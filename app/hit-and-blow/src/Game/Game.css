@@ -67,7 +67,7 @@
   grid-template-rows: 100px 48px 310px;
   grid-template-areas:
     "value   "
-    "warning"
+    "warning "
     "panel   ";
 }
 
@@ -121,6 +121,55 @@
 
 @media screen and (max-width: 1023px) {
   .status-message {
+    height: 42px;
     font-size: 16px;
+  }
+
+  .game-main {
+    margin: 5vh 5vw;
+    grid-template-rows: 95vw 1fr 28px;
+    grid-template-areas:
+      "answer-panel"
+      "result-table"
+      "back-to-home";
+    grid-gap: 5vh;
+  }
+
+  .AnswerPanel {
+    grid-area: answer-panel;
+    display: grid;
+    grid-template-rows: 20vw 10vw 64.5vw;
+    grid-template-areas:
+      "value   "
+      "warning "
+      "panel   ";
+  }
+
+  .result-table {
+    width: 90vw;
+    text-align: center;
+  }
+
+  .result-table th {
+    height: 36px;
+    width: 50%;
+    background-color: rgb(65, 105, 225);
+    font-size: 20px;
+  }
+
+  .result-table td {
+    height: 24px;
+    font-size: 16px;
+    background-color: rgb(173, 216, 230);
+    color: rgb(0, 0, 0);
+  }
+
+  .back-to-home button {
+    height: 100%;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(65, 105, 225);
+    font-size: 16px;
+    border-radius: 4px;
   }
 }

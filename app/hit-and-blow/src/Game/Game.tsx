@@ -198,19 +198,21 @@ class Game extends React.Component<Props, State> {
       );
     } else {
       const newCpuCan = this.state.cpuCan;
-      newCpuCan.forEach((item, index) => {
+      newCpuCan.map((item) => {
         const hitAndBlow = calcHitAndBlow(cpuInputNum, item.value);
         if (
           !(hitAndBlow.hit === ansObj.hit && hitAndBlow.blow === ansObj.blow)
         ) {
-          const newItem = {
-            value: item.value,
-            isRemain: false,
-          };
-          newCpuCan.splice(index, 1, newItem);
+          item.isRemain = false;
         }
+        return item;
       });
-      this.changeTurn();
+      this.setState(
+        {
+          cpuCan: newCpuCan,
+        },
+        () => this.changeTurn()
+      );
     }
   };
 
