@@ -205,6 +205,10 @@ button:focus {
 }
 
 @media screen and (max-width: 1023px) {
+  .title {
+    font-size: 12vw;
+  }
+
   .input-text {
     font-size: 5vw;
   }
