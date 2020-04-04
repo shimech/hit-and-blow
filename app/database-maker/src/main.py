@@ -33,7 +33,7 @@ def main():
 
 
 def generate_candidates(length):
-    return list(itertools.combinations(NUMS, length))
+    return list(itertools.permutations(NUMS, length))
 
 
 if __name__ == "__main__":
