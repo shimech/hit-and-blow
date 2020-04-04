@@ -64,6 +64,7 @@ const calcHitAndBlow = (num: string, ans: string) => {
 };
 interface Props {
   match: any;
+  history: any;
 }
 interface State {
   message: string;
@@ -77,6 +78,16 @@ interface State {
   isPlayerTurn: boolean;
   winner: string;
 }
+
+const isCorrectPlayerNum = (playerNum: string) => {
+  const onlyNum = playerNum.replace(/[^0-9]/g, "");
+  const array = onlyNum.split("");
+  const arrayRemoved = array.filter(
+    (item, index, self) => self.indexOf(item) === index
+  );
+  const numRemoved = arrayRemoved.join("");
+  return numRemoved.length === 4;
+};
 class Game extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -97,6 +108,9 @@ class Game extends React.Component<Props, State> {
       winner: winner,
     };
 
+    if (!isCorrectPlayerNum(this.state.playerNum)) {
+      this.props.history.push("/error");
+    }
     if (!isPlayerFirst) {
       screenLock();
       setTimeout(() => {
