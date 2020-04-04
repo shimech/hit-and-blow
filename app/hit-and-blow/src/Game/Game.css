@@ -1,0 +1,126 @@
+* {
+  background-color: rgb(40, 44, 52);
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  padding: 0px;
+}
+
+.status-message {
+  text-align: center;
+  margin: 24px 5vw;
+}
+
+.game-main {
+  display: grid;
+  justify-content: center;
+}
+
+.ResultTable {
+  grid-area: result-table;
+  text-align: center;
+}
+
+.result-table {
+  width: 100%;
+  text-align: center;
+}
+
+.result-table th {
+  height: 36px;
+  width: 50%;
+  background-color: rgb(65, 105, 225);
+  font-size: 32px;
+}
+
+.result-table td {
+  height: 32px;
+  font-size: 24px;
+  background-color: rgb(173, 216, 230);
+  color: rgb(0, 0, 0);
+}
+
+.result-table td:hover {
+  background-color: rgba(173, 216, 230, 0.8);
+}
+
+.result {
+  width: 20%;
+}
+
+.hit {
+  background-color: transparent;
+  color: rgb(220, 20, 60);
+}
+
+.blow {
+  background-color: transparent;
+  color: rgb(30, 144, 255);
+}
+
+.num {
+  width: 30%;
+}
+
+.AnswerPanel {
+  grid-area: answer-panel;
+  display: grid;
+  grid-template-rows: 100px 48px 310px;
+  grid-template-areas:
+    "value   "
+    "warning"
+    "panel   ";
+}
+
+.value {
+  grid-area: value;
+}
+
+.warning {
+  grid-area: warning;
+  text-align: center;
+}
+
+.panel {
+  grid-area: panel;
+}
+
+.back-to-home {
+  grid-area: back-to-home;
+  text-align: center;
+}
+
+.back-to-home button {
+  height: 100%;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(65, 105, 225);
+  font-size: 24px;
+  border-radius: 4px;
+}
+
+.back-to-home button:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+@media screen and (min-width: 1024px) {
+  .status-message {
+    font-size: 24px;
+  }
+
+  .game-main {
+    margin: 5vh 10vw;
+    height: 80vh;
+    grid-template-columns: 1fr 310px;
+    grid-template-rows: 1fr 36px;
+    grid-template-areas:
+      "result-table   answer-panel  "
+      "result-table   back-to-home  ";
+    grid-gap: 5vh 5vw;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .status-message {
+    font-size: 16px;
+  }
+}
