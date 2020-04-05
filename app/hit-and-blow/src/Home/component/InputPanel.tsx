@@ -16,7 +16,6 @@ interface State {
 class InputPanel extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-
     this.state = {
       value: initialValue,
       isSelect: initialIsSelect,
@@ -118,7 +117,9 @@ class InputPanel extends React.Component<Props, State> {
             <button className="clear" onClick={() => this.setValue("-")}>
               C
             </button>
-            <button className="return">⏎</button>
+            <button className="return" onClick={this.validateValue}>
+              ⏎
+            </button>
           </div>
           <div className="value">
             <button

@@ -1,40 +1,56 @@
 import * as React from "react";
 
+interface Candidate {
+  value: string;
+  isRemain: boolean;
+}
 interface Answer {
-  answer: string;
+  value: string;
   hit: number;
   blow: number;
 }
 
+interface PlayerInfo {
+  number: string;
+  answers: Answer[];
+  latestAns: string;
+}
+
+interface CpuInfo {
+  number: string;
+  answers: Answer[];
+  candidates: Candidate[];
+}
+
 interface Props {
-  playerNum: string;
-  playerAns: Answer[];
-  cpuNum: string;
-  cpuAns: Answer[];
+  player: PlayerInfo;
+  cpu: CpuInfo;
   winner: string;
 }
 interface State {}
 
 class ResultTable extends React.Component<Props, State> {
   generateRows = () => {
+    const playerAns = this.props.player.answers;
+    const cpuAns = this.props.cpu.answers;
     let rows;
-    if (this.props.playerAns.length >= this.props.cpuAns.length) {
-      rows = this.props.playerAns.map((ans, index) => {
-        if (index < this.props.cpuAns.length) {
+    if (playerAns.length >= cpuAns.length) {
+      rows = playerAns.map((ansObj, index) => {
+        if (index < cpuAns.length) {
           return (
             <tr key={index}>
               <td className="result">
-                {ans.hit}
+                {ansObj.hit}
                 <span className="hit">H</span>
-                {ans.blow}
+                {ansObj.blow}
                 <span className="blow">B</span>
               </td>
-              <td className="num">{ans.answer}</td>
-              <td className="num">{this.props.cpuAns[index].answer}</td>
+              <td className="num">{ansObj.value}</td>
+              <td className="num">{cpuAns[index].value}</td>
               <td className="result">
-                {this.props.cpuAns[index].hit}
+                {cpuAns[index].hit}
                 <span className="hit">H</span>
-                {this.props.cpuAns[index].blow}
+                {cpuAns[index].blow}
                 <span className="blow">B</span>
               </td>
             </tr>
@@ -43,33 +59,33 @@ class ResultTable extends React.Component<Props, State> {
           return (
             <tr key={index}>
               <td className="result">
-                {ans.hit}
+                {ansObj.hit}
                 <span className="hit">H</span>
-                {ans.blow}
+                {ansObj.blow}
                 <span className="blow">B</span>
               </td>
-              <td className="num">{ans.answer}</td>
+              <td className="num">{ansObj.value}</td>
             </tr>
           );
         }
       });
     } else {
-      rows = this.props.cpuAns.map((ans, index) => {
-        if (index < this.props.playerAns.length) {
+      rows = cpuAns.map((ansObj, index) => {
+        if (index < playerAns.length) {
           return (
             <tr key={index}>
               <td className="result">
-                {this.props.playerAns[index].hit}
+                {playerAns[index].hit}
                 <span className="hit">H</span>
-                {this.props.playerAns[index].blow}
+                {playerAns[index].blow}
                 <span className="blow">B</span>
               </td>
-              <td className="num">{this.props.playerAns[index].answer}</td>
-              <td className="num">{ans.answer}</td>
+              <td className="num">{playerAns[index].value}</td>
+              <td className="num">{ansObj.value}</td>
               <td className="result">
-                {ans.hit}
+                {ansObj.hit}
                 <span className="hit">H</span>
-                {ans.blow}
+                {ansObj.blow}
                 <span className="blow">B</span>
               </td>
             </tr>
@@ -77,19 +93,13 @@ class ResultTable extends React.Component<Props, State> {
         } else {
           return (
             <tr key={index}>
-              <td
-                className="result"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-              ></td>
-              <td
-                className="num"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-              ></td>
-              <td className="num">{ans.answer}</td>
+              <td className="result" style={{ opacity: "0" }}></td>
+              <td className="num" style={{ opacity: "0" }}></td>
+              <td className="num">{ansObj.value}</td>
               <td className="result">
-                {ans.hit}
+                {ansObj.hit}
                 <span className="hit">H</span>
-                {ans.blow}
+                {ansObj.blow}
                 <span className="blow">B</span>
               </td>
             </tr>
@@ -100,7 +110,8 @@ class ResultTable extends React.Component<Props, State> {
     return rows;
   };
 
-  controlCpuNum = () => (this.props.winner === "" ? "????" : this.props.cpuNum);
+  controlCpuNum = () =>
+    this.props.winner === "" ? "????" : this.props.cpu.number;
 
   render = () => {
     const rows = this.generateRows();
@@ -110,7 +121,7 @@ class ResultTable extends React.Component<Props, State> {
         <table className="result-table">
           <thead>
             <tr className="label">
-              <th colSpan={2}>あなた ({this.props.playerNum})</th>
+              <th colSpan={2}>あなた ({this.props.player.number})</th>
               <th colSpan={2}>CPU ({this.controlCpuNum()})</th>
             </tr>
           </thead>
