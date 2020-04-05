@@ -9,7 +9,9 @@ interface Answer {
 interface Props {
   playerNum: string;
   playerAns: Answer[];
+  cpuNum: string;
   cpuAns: Answer[];
+  winner: string;
 }
 interface State {}
 
@@ -98,7 +100,9 @@ class ResultTable extends React.Component<Props, State> {
     return rows;
   };
 
-  render() {
+  controlCpuNum = () => (this.props.winner === "" ? "????" : this.props.cpuNum);
+
+  render = () => {
     const rows = this.generateRows();
 
     return (
@@ -107,14 +111,14 @@ class ResultTable extends React.Component<Props, State> {
           <thead>
             <tr className="label">
               <th colSpan={2}>あなた ({this.props.playerNum})</th>
-              <th colSpan={2}>CPU (????)</th>
+              <th colSpan={2}>CPU ({this.controlCpuNum()})</th>
             </tr>
           </thead>
           <tbody>{rows}</tbody>
         </table>
       </div>
     );
-  }
+  };
 }
 
 export default ResultTable;

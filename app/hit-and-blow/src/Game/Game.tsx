@@ -81,11 +81,15 @@ interface State {
 
 const isCorrectPlayerNum = (playerNum: string) => {
   const onlyNum = playerNum.replace(/[^0-9]/g, "");
+  if (playerNum.length !== onlyNum.length) return false;
+
   const array = onlyNum.split("");
   const arrayRemoved = array.filter(
     (item, index, self) => self.indexOf(item) === index
   );
   const numRemoved = arrayRemoved.join("");
+  if (onlyNum.length !== numRemoved.length) return false;
+
   return numRemoved.length === 4;
 };
 class Game extends React.Component<Props, State> {
@@ -107,17 +111,6 @@ class Game extends React.Component<Props, State> {
       isPlayerTurn: isPlayerFirst,
       winner: winner,
     };
-
-    if (!isCorrectPlayerNum(this.state.playerNum)) {
-      this.props.history.push("/error");
-    }
-    if (!isPlayerFirst) {
-      screenLock();
-      setTimeout(() => {
-        this.handleCpuTurn();
-        deleteDomObj("screen-lock");
-      }, 2000);
-    }
   }
 
   setInputNum = (inputNum: string) => {
@@ -230,7 +223,21 @@ class Game extends React.Component<Props, State> {
     }
   };
 
-  render() {
+  componentDidMount = () => {
+    if (!isCorrectPlayerNum(this.state.playerNum)) {
+      this.props.history.push("/error");
+    }
+
+    if (!this.state.isPlayerTurn) {
+      screenLock();
+      setTimeout(() => {
+        this.handleCpuTurn();
+        deleteDomObj("screen-lock");
+      }, 2000);
+    }
+  };
+
+  render = () => {
     return (
       <div className="Game">
         <div className="status-message">
@@ -240,7 +247,9 @@ class Game extends React.Component<Props, State> {
           <ResultTable
             playerNum={this.state.playerNum}
             playerAns={this.state.playerAns}
+            cpuNum={this.state.cpuNum}
             cpuAns={this.state.cpuAns}
+            winner={this.state.winner}
           />
           <AnswerPanel updateInputNum={this.setInputNum} />
           <div className="back-to-home">
@@ -251,7 +260,7 @@ class Game extends React.Component<Props, State> {
         </div>
       </div>
     );
-  }
+  };
 }
 
 export default Game;
