@@ -10,9 +10,21 @@ interface Candidate {
 }
 
 interface Answer {
-  answer: string;
+  value: string;
   hit: number;
   blow: number;
+}
+
+interface PlayerInfo {
+  number: string;
+  answers: Answer[];
+  latestAns: string;
+}
+
+interface CpuInfo {
+  number: string;
+  answers: Answer[];
+  candidates: Candidate[];
 }
 
 const screenLock = () => {
@@ -25,7 +37,8 @@ const screenLock = () => {
   element.style.left = "0px";
   element.style.zIndex = "9999";
   element.style.opacity = "0";
-  let objBody = document.querySelector("body");
+
+  const objBody = document.querySelector("body");
   objBody?.appendChild(element);
 };
 
@@ -35,31 +48,31 @@ const deleteDomObj = (idName: string) => {
   domObjParent?.removeChild(domObj as Node);
 };
 
+const cpuTurnTime = 2000;
+
+const whichIsFirst = () => Math.random() < 0.5;
+
 const selectRandomNum = (candidates: Candidate[]) => {
   const index = Math.floor(Math.random() * candidates.length);
   return candidates[index].value;
 };
 
-const whichIsFirst = () => Math.random() < 0.5;
-
 const calcHitAndBlow = (num: string, ans: string) => {
-  let countHit = 0;
-  let countBlow = 0;
-  for (var i = 0; i < num.length; i++) {
+  let hit = 0;
+  let blow = 0;
+  for (let i = 0; i < num.length; i++) {
     if (num[i] === ans[i]) {
-      countHit += 1;
+      hit += 1;
     } else if (ans.match(num[i])) {
-      countBlow += 1;
+      blow += 1;
     }
   }
-  let ansObj: Answer = {
-    answer: "",
-    hit: 0,
-    blow: 0,
+
+  const ansObj: Answer = {
+    value: ans,
+    hit: hit,
+    blow: blow,
   };
-  ansObj.answer = ans;
-  ansObj.hit = countHit;
-  ansObj.blow = countBlow;
   return ansObj;
 };
 interface Props {
@@ -68,13 +81,8 @@ interface Props {
 }
 interface State {
   message: string;
-  playerNum: string;
-  playerInputNum: string;
-  playerAns: Answer[];
-  playerCan: Candidate[];
-  cpuNum: string;
-  cpuAns: Answer[];
-  cpuCan: Candidate[];
+  player: PlayerInfo;
+  cpu: CpuInfo;
   isPlayerTurn: boolean;
   winner: string;
 }
@@ -101,62 +109,20 @@ class Game extends React.Component<Props, State> {
 
     this.state = {
       message: this.setMessage(isPlayerFirst, winner),
-      playerNum: this.props.match.params.playerNum,
-      playerInputNum: "",
-      playerAns: [],
-      playerCan: candidates,
-      cpuNum: selectRandomNum(candidates),
-      cpuAns: [],
-      cpuCan: candidates,
+      player: {
+        number: this.props.match.params.playerNum,
+        latestAns: "",
+        answers: [],
+      },
+      cpu: {
+        number: selectRandomNum(candidates),
+        answers: [],
+        candidates: candidates,
+      },
       isPlayerTurn: isPlayerFirst,
       winner: winner,
     };
   }
-
-  setInputNum = (inputNum: string) => {
-    if (this.state.winner === "") {
-      this.setState(
-        {
-          playerInputNum: inputNum,
-        },
-        () => {
-          const ansObj = calcHitAndBlow(this.state.cpuNum, inputNum);
-          this.setAnswer(ansObj, true);
-          if (ansObj.hit === 4) {
-            this.setState(
-              {
-                winner: "あなた",
-              },
-              () => {
-                this.updateMessage();
-              }
-            );
-          } else {
-            this.changeTurn();
-            screenLock();
-            setTimeout(() => {
-              this.handleCpuTurn();
-              deleteDomObj("screen-lock");
-            }, 2000);
-          }
-        }
-      );
-    }
-  };
-
-  setAnswer = (ansObj: Answer, isPlayer: boolean) => {
-    if (isPlayer) {
-      const newAns = this.state.playerAns.concat([ansObj]);
-      this.setState({
-        playerAns: newAns,
-      });
-    } else {
-      const newAns = this.state.cpuAns.concat([ansObj]);
-      this.setState({
-        cpuAns: newAns,
-      });
-    }
-  };
 
   setMessage = (isPlayerTurn: boolean, winner: string) => {
     let message;
@@ -178,62 +144,94 @@ class Game extends React.Component<Props, State> {
     });
   };
 
+  setLatestAns = (latestAns: string) => {
+    if (this.state.winner === "") {
+      const newPlayerObj: PlayerInfo = this.state.player;
+      newPlayerObj.latestAns = latestAns;
+      this.setState({ player: newPlayerObj }, () => this.executePlayerTurn());
+    }
+  };
+
+  setAnswer = (ansObj: Answer, isPlayer: boolean) => {
+    if (isPlayer) {
+      const newPlayerObj = this.state.player;
+      newPlayerObj.answers = newPlayerObj.answers.concat([ansObj]);
+      this.setState({ player: newPlayerObj });
+    } else {
+      const newCpuObj = this.state.cpu;
+      newCpuObj.answers = newCpuObj.answers.concat([ansObj]);
+      this.setState({ cpu: newCpuObj });
+    }
+  };
+
   changeTurn = () => {
-    this.setState(
-      {
-        isPlayerTurn: !this.state.isPlayerTurn,
-      },
-      () => this.updateMessage()
+    this.setState({ isPlayerTurn: !this.state.isPlayerTurn }, () =>
+      this.updateMessage()
     );
   };
 
-  handleCpuTurn = () => {
-    const cpuCandidates = this.state.cpuCan.filter(
+  executePlayerTurn = () => {
+    const ansObj = calcHitAndBlow(
+      this.state.cpu.number,
+      this.state.player.latestAns
+    );
+    this.setAnswer(ansObj, true);
+    if (ansObj.hit === 4) {
+      this.setState({ winner: "あなた" }, () => this.updateMessage());
+    } else {
+      this.changeTurn();
+
+      screenLock();
+      setTimeout(() => {
+        this.executeCpuTurn();
+        deleteDomObj("screen-lock");
+      }, cpuTurnTime);
+    }
+  };
+
+  updateCpuCandidates = (
+    cpuLatestAns: string,
+    latestAnsObj: Answer,
+    callback: () => void
+  ) => {
+    const newCpuCandidates = this.state.cpu.candidates;
+    newCpuCandidates.map((candidate) => {
+      const hitAndBlow = calcHitAndBlow(cpuLatestAns, candidate.value);
+      candidate.isRemain =
+        hitAndBlow.hit === latestAnsObj.hit &&
+        hitAndBlow.blow === latestAnsObj.blow &&
+        candidate.isRemain;
+      return candidate;
+    });
+    const newCpuObj = this.state.cpu;
+    newCpuObj.candidates = newCpuCandidates;
+    this.setState({ cpu: newCpuObj }, callback);
+  };
+
+  executeCpuTurn = () => {
+    const cpuCandidatesRemained = this.state.cpu.candidates.filter(
       (candidate) => candidate.isRemain
     );
-    const cpuInputNum = selectRandomNum(cpuCandidates);
-    const ansObj = calcHitAndBlow(this.state.playerNum, cpuInputNum);
+    const cpuLatestAns = selectRandomNum(cpuCandidatesRemained);
+    const ansObj = calcHitAndBlow(this.state.player.number, cpuLatestAns);
     this.setAnswer(ansObj, false);
+
     if (ansObj.hit === 4) {
-      this.setState(
-        {
-          winner: "CPU",
-        },
-        () => {
-          this.updateMessage();
-        }
-      );
+      this.setState({ winner: "CPU" }, () => this.updateMessage());
     } else {
-      const newCpuCan = this.state.cpuCan;
-      newCpuCan.map((item) => {
-        const hitAndBlow = calcHitAndBlow(cpuInputNum, item.value);
-        if (
-          !(hitAndBlow.hit === ansObj.hit && hitAndBlow.blow === ansObj.blow)
-        ) {
-          item.isRemain = false;
-        }
-        return item;
-      });
-      this.setState(
-        {
-          cpuCan: newCpuCan,
-        },
-        () => this.changeTurn()
-      );
+      this.updateCpuCandidates(cpuLatestAns, ansObj, () => this.changeTurn());
     }
   };
 
   componentDidMount = () => {
-    if (!isCorrectPlayerNum(this.state.playerNum)) {
+    if (!isCorrectPlayerNum(this.state.player.number)) {
       this.props.history.push("/error");
-    }
-
-    if (!this.state.isPlayerTurn) {
+    } else if (!this.state.isPlayerTurn) {
       screenLock();
       setTimeout(() => {
-        this.handleCpuTurn();
+        this.executeCpuTurn();
         deleteDomObj("screen-lock");
-      }, 2000);
+      }, cpuTurnTime);
     }
   };
 
@@ -245,13 +243,11 @@ class Game extends React.Component<Props, State> {
         </div>
         <div className="game-main">
           <ResultTable
-            playerNum={this.state.playerNum}
-            playerAns={this.state.playerAns}
-            cpuNum={this.state.cpuNum}
-            cpuAns={this.state.cpuAns}
+            player={this.state.player}
+            cpu={this.state.cpu}
             winner={this.state.winner}
           />
-          <AnswerPanel updateInputNum={this.setInputNum} />
+          <AnswerPanel setLatestAns={this.setLatestAns} />
           <div className="back-to-home">
             <a href="/">
               <button>ホームへ戻る</button>

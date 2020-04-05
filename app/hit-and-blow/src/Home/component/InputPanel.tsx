@@ -1,5 +1,11 @@
 import * as React from "react";
 
+const initialValue = ["-", "-", "-", "-"];
+const initialIsSelect = [true, false, false, false];
+
+const selectColor = (isSelect: boolean) =>
+  isSelect ? "rgb(255, 0, 0)" : "rgb(100, 100, 100)";
+
 interface Props {}
 interface State {
   value: string[];
@@ -7,68 +13,48 @@ interface State {
   borderColor: string[];
   warning: string;
 }
-
-const selectColor = (isSelect: boolean) =>
-  isSelect ? "rgb(255, 0, 0)" : "rgb(100, 100, 100)";
-
 class InputPanel extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      value: ["-", "-", "-", "-"],
-      isSelect: [true, false, false, false],
-      borderColor: [
-        selectColor(true),
-        selectColor(false),
-        selectColor(false),
-        selectColor(false)
-      ],
-      warning: ""
+      value: initialValue,
+      isSelect: initialIsSelect,
+      borderColor: initialIsSelect.map((isSelect) => selectColor(isSelect)),
+      warning: "",
     };
+
     this.validateValue = this.validateValue.bind(this);
   }
 
   setBorderColor = () => {
     this.setState({
-      borderColor: [
-        selectColor(this.state.isSelect[0]),
-        selectColor(this.state.isSelect[1]),
-        selectColor(this.state.isSelect[2]),
-        selectColor(this.state.isSelect[3])
-      ]
+      borderColor: this.state.isSelect.map((isSelect) => selectColor(isSelect)),
     });
   };
 
   selectOneValue = (whichValue: number) => {
-    let newState = [false, false, false, false];
-    newState[whichValue] = true;
-    this.setState(
-      {
-        isSelect: newState
-      },
-      () => {
-        this.setBorderColor();
-      }
+    const newIsSelect = [false, false, false, false].map(
+      (value, index) => index === whichValue
     );
+    this.setState({ isSelect: newIsSelect }, () => this.setBorderColor());
   };
 
   setValue = (value: string) => {
     if (value === "-") {
       this.setState(
         {
-          value: ["-", "-", "-", "-"],
-          isSelect: [true, false, false, false]
+          value: initialValue,
+          isSelect: initialIsSelect,
         },
         () => this.setBorderColor()
       );
     } else {
       const whichValue = this.state.isSelect.indexOf(true);
       if (whichValue !== -1) {
-        let newValue = this.state.value;
-        newValue[whichValue] = value;
-        this.setState({
-          value: newValue
-        });
+        const newValues = this.state.value.map((oldValue, index) =>
+          index === whichValue ? value : oldValue
+        );
+        this.setState({ value: newValues });
 
         if (whichValue !== 3) {
           this.selectOneValue(whichValue + 1);
@@ -84,16 +70,15 @@ class InputPanel extends React.Component<Props, State> {
     } else if (this.state.value.length !== new Set(this.state.value).size) {
       message = "数字の重複があります";
     }
-    this.setState({
-      warning: message
-    });
+    this.setState({ warning: message });
+
     if (message === "") {
       const playerNum = this.state.value.join("");
       window.location.href = `/game/${playerNum}`;
     }
   };
 
-  render() {
+  render = () => {
     return (
       <div className="InputPanel">
         <div className="input-text">あなたの数字を入力してください</div>
@@ -132,7 +117,9 @@ class InputPanel extends React.Component<Props, State> {
             <button className="clear" onClick={() => this.setValue("-")}>
               C
             </button>
-            <button className="return">⏎</button>
+            <button className="return" onClick={this.validateValue}>
+              ⏎
+            </button>
           </div>
           <div className="value">
             <button
@@ -173,7 +160,7 @@ class InputPanel extends React.Component<Props, State> {
         </div>
       </div>
     );
-  }
+  };
 }
 
 export default InputPanel;

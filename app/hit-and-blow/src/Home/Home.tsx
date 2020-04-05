@@ -6,7 +6,7 @@ interface Props {}
 interface State {}
 
 class Home extends React.Component<Props, State> {
-  render() {
+  render = () => {
     return (
       <div className="Home">
         <h1 className="title">
@@ -17,7 +17,7 @@ class Home extends React.Component<Props, State> {
         <InputPanel />
       </div>
     );
-  }
+  };
 }
 
 export default Home;
