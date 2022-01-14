@@ -14,7 +14,7 @@
     "immer": "^9.0.6",
     "is-svg": "^4.3.1",
     "lodash": "^4.17.19",
-    "node-forge": "^0.10.0",
+    "node-forge": "^1.0.0",
     "node-notifier": "^9.0.1",
     "object-path": "^0.11.8",
     "react": "^16.13.1",
